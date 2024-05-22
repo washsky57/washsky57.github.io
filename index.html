@@ -1,11 +1,127 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Download File</title>
-<style>
-a {
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>表单</title>
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+				background-color: #f0f0f0;
+				margin: 0;
+				padding: 0;
+			}
+
+			.container {
+				width: 500px;
+				margin: 100px auto;
+				padding: 40px;
+				border: 1px dashed gray;
+				border-radius: 10px;
+				background-color: #fff;
+			}
+
+			form {
+				margin-top: 20px;
+			}
+
+			ul {
+				padding: 0;
+			}
+
+			li {
+				list-style: none;
+				margin-bottom: 10px;
+			}
+
+			label {
+				display: inline-block;
+				font-weight: bold;
+				text-align: right;
+				margin-top: 10px;
+				width: 100px;
+				margin-right: 8px;
+			}
+
+			input[type="text"],
+			input[type="date"],
+			input[type="number"],
+			input[type="file"] {
+				width: 200px;
+				padding: 5px;
+				border: 1px solid #ccc;
+				border-radius: 3px;
+				box-sizing: border-box;
+			}
+
+			input[type="submit"] {
+				width: 80px;
+				padding: 5px 10px;
+				background-color: #007bff;
+				color: #fff;
+				border: none;
+				border-radius: 3px;
+				margin-left: 100px;
+				margin-top: 10px;
+			}
+
+			textarea {
+				margin-left: 110px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<form action="">
+				<ul>
+					<li>
+						<label for="name">姓名:</label>
+						<input type="text" id="name" name="name" placeholder="张三">
+					</li>
+					<li>
+						<label for="birthdate">出生日期:</label>
+						<input type="date" id="birthdate" name="birthdate">
+					</li>
+					<li>
+						<label>性别:</label>
+						<input type="radio" id="male" name="gender" value="male">
+						男
+						<input type="radio" id="female" name="gender" value="female">
+						女
+					</li>
+					<li>
+						<label for="weight">体重:</label>
+						<input type="number" id="weight" name="weight">
+						kg
+					</li>
+					<li>
+						<label>兴趣:</label>
+						<input type="checkbox" id="interestA" name="interest[]" value="A">
+						A
+						<input type="checkbox" id="interestB" name="interest[]" value="B">
+						B
+						<input type="checkbox" id="interestC" name="interest[]" value="C">
+						C
+					</li>
+					<li>
+						<label for="color">喜欢的颜色:</label>
+						<input type="color" id="color" name="color">
+					</li>
+					<li>
+						<label for="avatar">上传头像:</label>
+						<input type="file" id="avatar" name="avatar">
+					</li>
+					<li>
+						<label for="suggestion">你的建议:</label><br>
+						<textarea id="suggestion" name="suggestion" rows="4" cols="30"></textarea>
+					</li>
+					<li>
+						<input type="submit" value="提交">
+					</li>
+				</ul>
+			</form>
+
+		</div>
+		<div class="box" style="a {
     display: inline-block;
     padding: 10px 20px;
     background-color: #007bff;
@@ -14,32 +130,16 @@ a {
     border-radius: 5px;
 }
 
-/* 设置链接悬停样式 */
+
 a:hover {
     background-color: #0056b3;
-}
-</style>
+}">
 
-</head>
-<body>
-<h1>如下图展示，应该都全部发你了，其中工资单里有考勤天数，你看看工资单上是不是</h1><br>
-    <img src="bmy.png" alt=""><br>
-<h1></h1>
-    <img src="path_to_your_image.jpg" alt="">
-<!-- 下载链接 --><br>
-<a href="No I的文件.zip" download="No I的文件.zip">点击下载文件====No I的文件.zip</a><br><br>
-<a href="No I的文件2.zip" download="No I的文件2.zip">点击下载文件====No I的文件2.zip</a><br><br>
-<a href="其他可能位置的文件.zip" download="其他可能位置的文件.zip">点击下载文件====其他可能位置的文件.zip</a>
-<a href="hello.html">你好，修改1</a>
+			<a href="No I的文件.zip" download="No I的文件.zip">点击下载文件====No I的文件.zip</a><br><br>
+			<a href="No I的文件2.zip" download="No I的文件2.zip">点击下载文件====No I的文件2.zip</a><br><br>
+			<a href="其他可能位置的文件.zip" download="其他可能位置的文件.zip">点击下载文件====其他可能位置的文件.zip</a>
+			<a href="hello.html">你好，修改1</a>
+		</div>
 
-<a></a>
-<a></a>
-<a></a>
-<a></a>
-
-
-
-
-
-</body>
+	</body>
 </html>
