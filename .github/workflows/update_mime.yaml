@@ -1,0 +1,23 @@
+name: Update MIME types
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  update_mime:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set MIME types
+        run: |
+          echo -e "AddType application/x-ns-proxy-autoconfig .pac" > .github/.htaccess
+          cp .github/.htaccess proxy.pac
+          git config --global user.email "actions@github.com"
+          git config --global user.name "GitHub Actions"
+          git add proxy.pac .github/.htaccess
+          git commit -m "Update MIME types"
+          git push
