@@ -24,3 +24,5 @@ jobs:
           git add .htaccess
           git commit -m "Update MIME types"
           git push https://x-access-token:${{ secrets.ACTIONS_PAT }}@github.com/washsky57/washsky57.github.io.git HEAD:main
+
+
